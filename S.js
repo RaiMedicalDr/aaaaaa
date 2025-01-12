@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // 正解のコードを定義
         const correctCode = `
-<h1>HTMLの基本</h1>
-<h2>HTML入門</h2>
+        <h1>HTMLの基本</h1>
+        <h2>HTML入門</h2>
 `.trim();
 
         // 判定処理
@@ -33,8 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // 正解のコードを定義（例: kouza2.html）
         const correctCode2 = `
-<p>HTMLはウェブページを作成するための基本的なマークアップ言語です。</p>
-<p>CSSとJavaScriptと組み合わせることで、より豊かなウェブ体験を提供できます。</p>
+        <p>HTMLはウェブページを作成するための基本的なマークアップ言語です。</p>
+        <p>CSSとJavaScriptと組み合わせることで、より豊かなウェブ体験を提供できます。</p>
 `.trim();
 
         // 判定処理
@@ -61,9 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // kouza3.html (リスト)
             kouza3: `
 <ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
 </ul>
 `.trim(),
             // kouza4.html (リンク)
