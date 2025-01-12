@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>読解問題 - 複雑なHTML</title>
+    <link rel="stylesheet" href="reading_style.css">
+    <script defer src="reading_logic.js"></script>
+  
+</head>
+<body>
+    <header>
+        <h1>HTML 読解問題 - 応用編</h1>
+    </header>
+    <main>
+        <section class="question">
+            <p>以下のコード A とコード B を読んで、どちらが正しいHTML構造か選択してください。</p>
+            
+            <p>プレビュー</p>
+            <img clas-"lala" src="スクリーンショット 2025-01-12 21.32.53.png"
+
+
+            <div class="code-section">
+                <h2>コード A:</h2>
+                <pre class="code-block">
+&lt;div&gt;
+    &lt;h1&gt;学習内容&lt;/h1&gt;
+    &lt;p&gt;次のリストを確認してください。&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="https://example.com"&gt;HTML&lt;/li&gt;
+        &lt;li&gt;CSS&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;JavaScript&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+                </pre>
+            </div>
+
+            <div class="code-section">
+                <h2>コード B:</h2>
+                <pre class="code-block">
+&lt;div&gt;
+    &lt;h1&gt;学習内容&lt;/h1&gt;
+    &lt;p&gt;次のリストを確認してください。&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="https://example.com"&gt;HTML&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;CSS&lt;/li&gt;
+        &lt;li&gt;JavaScript&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+                </pre>
+            </div>
+
+            <div class="choices">
+                <button class="choice" data-answer="A">コード A</button>
+                <button class="choice" data-answer="B">コード B</button>
+            </div>
+        </section>
+
+        <div id="result" class="result"></div>
+    </main>
+
+</body>
+</html>
+
