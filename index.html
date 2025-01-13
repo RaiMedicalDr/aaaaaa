@@ -3,28 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>スタサプ風テスト</title>
+    <title>テスト</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* スタイル調整 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .lesson-list h2 {
+            font-size: 1.5em;
+        }
+
+        .accordion {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .accordion:hover {
+            background-color: #45a049f3;
+        }
+
+        .panel {
+            padding: 0 15px;
+            background-color: #f9f9f9;
+            display: none;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+        .panel ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        .panel ul li {
+            margin: 10px 0;
+        }
+
+        .panel ul li a {
+            text-decoration: none;
+            color: #0073e6;
+        }
+
+        .panel ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #ddd;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>HTMLコースへようこそ！</h1>
+        <h1>HTMLコース</h1>
     </header>
+
+    <!-- 講座1 -->
     <main>
         <div class="lesson-list">
             <h2>講座一覧</h2>
-            <ul>
-                <li><a href="kouza1">講座 1完了: 見出しタグ</a></li>
-                <li><a href="kouza2">講座 2完了: 段落タグ</a></li>
-                <li><a href="kouza3.html">講座 3: リスト</a></li>
-                <li><a href="kouza4.html">講座 4: リンク</a></li>
-                <li><a href="kouza5.html">講座 5: 画像</a></li>
-                <li><a href="reading_test">難関講座 6:すべてを用いた問題完了</a></li>
-            </ul>
+            <button class="accordion">講座1-(1~6)</button>
+            <div class="panel">
+                <ul>
+                    <li><a href="kouza1.html">講座 1: 見出しタグ</a></li>
+                    <li><a href="kouza2.html">講座 2: 段落タグ</a></li>
+                    <li><a href="kouza3.html">講座 3: リスト</a></li>
+                    <li><a href="kouza4.html">講座 4: リンク</a></li>
+                    <li><a href="kouza5.html">講座 5: 画像</a></li>
+                    <li><a href="reading_test.html">難関講座 6: すべてを用いた問題</a></li>
+                </ul>
+            </div>
         </div>
     </main>
+
+    <!-- 講座2 -->
+    <main>
+        <div class="lesson-list">
+            <h2>講座一覧</h2>
+            <button class="accordion">講座2-(1~6)</button>
+            <div class="panel">
+                <ul>
+                    <li><a href="html2/kouza1.html">講座 1: css(色）</a></li>
+                    <li><a href="html2/kouza2.html">講座 2: css(大きさ）</a></li>
+                    <li><a href="html2/kouza3.html">講座 3: css（高さと幅）</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
     <footer>
         <p>&copy; 2025 HTML学習コース</p>
     </footer>
+
+    <script>
+        // 複数のアコーディオンを制御するスクリプト
+        document.addEventListener('DOMContentLoaded', () => {
+            const accordions = document.querySelectorAll('.accordion');
+            const panels = document.querySelectorAll('.panel');
+
+            accordions.forEach((accordion, index) => {
+                accordion.addEventListener('click', () => {
+                    // 現在のパネルを取得
+                    const panel = panels[index];
+
+                    // 他のパネルを閉じる（必要に応じて）
+                    panels.forEach((p, i) => {
+                        if (i !== index) {
+                            p.style.display = 'none';
+                            accordions[i].textContent = accordions[i].textContent.replace('を閉じる', '');
+                        }
+                    });
+
+                    // 現在のパネルの表示/非表示を切り替える
+                    const isPanelVisible = panel.style.display === 'block';
+                    panel.style.display = isPanelVisible ? 'none' : 'block';
+                    accordion.textContent = isPanelVisible 
+                        ? accordion.textContent.replace('を閉じる', '') 
+                        : accordion.textContent + 'を閉じる';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
