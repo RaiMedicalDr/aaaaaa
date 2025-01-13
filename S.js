@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 `),
             // kouza5.html (画像)
             kouza5: normalizeCode(`
-<img src="image.jpg" alt="サンプル画像">
+<img src="image.jpg">
 `),
         };
 
